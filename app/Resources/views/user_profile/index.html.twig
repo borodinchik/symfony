@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <style>
+        a:hover {
+            color: gray;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+    </style>
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <a href="{{ path('logout') }}"><i class="fas fa-sign-out-alt" style="font-size: 15px"></i></a>
+    {% endif %}
+{% endblock %}

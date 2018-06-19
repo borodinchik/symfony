@@ -38,5 +38,4 @@ class RegisterController extends Controller
             'form' => $form->createView()
         ]);
     }
-
 }
