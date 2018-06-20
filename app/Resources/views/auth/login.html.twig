@@ -3,9 +3,9 @@
 {% block body %}
     <style>
         .soc-panel {
-            background-color: #7DA0B1;
-            width: 250px;
-            height: 250px;
+
+            width: 150px;
+            height: 70px;
             margin-top: 30px;
             margin: 0 auto;
             border-radius: 15px;
@@ -17,9 +17,12 @@
             color: #000;
             text-decoration: none;
         }
-        .soc-facebook
+        .soc
         {
-            font-size: 50px;
+            font-size: 40px;
+        }
+        span a {
+            color: #218BC3;
         }
 
     </style>
@@ -37,12 +40,13 @@
 
         <button type="submit" class="btn btn-success">Login</button>
     </form>
+    <div class="soc-panel">
+        <a class="soc" href=""><i class="fab fa-facebook-square"></i></a>
+        <a class="soc" href=""><i class="fab fa-google"></i></a>
     </div>
-    <div class="col-md-6">
-        <div class="soc-panel">
-            <a class="soc-facebook" href=""><i class="fab fa-facebook-square"></i></a>
-        </div>
+    <span>Not account yet:<a href="/register">Create new account</a></span>
     </div>
+
     {% if error %}
         <hr>
         <div class="alert alert-danger">
