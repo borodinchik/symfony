@@ -32,7 +32,7 @@ class RegisterController extends Controller
             $em->persist($user);
             $em->flush();
 
-            return $this->redirectToRoute('/');
+            return $this->redirectToRoute('homepage');
         }
         return $this->render('auth/register.html.twig', [
             'form' => $form->createView()

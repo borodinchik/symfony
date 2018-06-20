@@ -8,9 +8,27 @@
         a {
             color: #000;
             text-decoration: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .logout{
+            font-size: 15px;
+        }
+        .logout-block{
+            display: flex;
+            justify-content: flex-end;
         }
     </style>
+
+    <div class="col-md-12">
     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-        <a href="{{ path('logout') }}"><i class="fas fa-sign-out-alt" style="font-size: 15px"></i></a>
+        <div class="logout-block">
+            <a class="soc" href="{{ path('logout') }}">
+                <i class="fas fa-sign-out-alt logout" >Logout
+                </i>
+            </a>
+        </div>
     {% endif %}
+    </div>
+
 {% endblock %}
