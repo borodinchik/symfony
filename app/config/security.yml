@@ -2,11 +2,14 @@
 # https://symfony.com/doc/current/security.html
 security:
     encoders:
+        FOS\UserBundle\Model\UserInterface: bcrypt
         AppBundle\Entity\User:
             algorithm: bcrypt
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username
         db_provider:
             entity:
                 class: AppBundle:User
@@ -19,8 +22,11 @@ security:
             security: false
 
         main:
+            pattern: ^/
             anonymous: ~
             form_login:
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager
                 login_path: login
                 check_path: login
             logout:

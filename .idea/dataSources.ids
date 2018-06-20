@@ -8,42 +8,6 @@
     <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
       <schema id="1" name="symfony_database"/>
-      <table id="2" parent="1" name="user"/>
-      <column id="3" parent="2" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-        <sequence-identity>1</sequence-identity>
-      </column>
-      <column id="4" parent="2" name="username">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="5" parent="2" name="password">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="6" parent="2" name="email">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="7" parent="2" name="roles">
-        <comment>(DC2Type:array)</comment>
-        <mandatory>1</mandatory>
-        <data-type>longtext</data-type>
-      </column>
-      <index id="8" parent="2" name="UNIQ_8D93D649E7927C74">
-        <columns>email</columns>
-        <desc-columns></desc-columns>
-        <unique>1</unique>
-      </index>
-      <key id="9" parent="2" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <key id="10" parent="2" name="UNIQ_8D93D649E7927C74">
-        <columns>email</columns>
-        <underlying-index>UNIQ_8D93D649E7927C74</underlying-index>
-      </key>
     </database-model>
   </data-source>
 </component>
